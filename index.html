@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3e8e41;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .module {
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            min-width: 300px;
+        }
+        h2 {
+            color: #3e8e41;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #3e8e41;
+            color: white;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        button {
+            background-color: #3e8e41;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2b6c2f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido al Panel de Gestión</h1>
+</header>
+
+<div class="container">
+    <!-- Módulo de Registro -->
+    <div class="module">
+        <h2>Registro de Usuario</h2>
+        <form action="#">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"><br><br>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo"><br><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña"><br><br>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+
+    <!-- Módulo de Consulta de Saldo -->
+    <div class="module">
+        <h2>Consulta de Saldo</h2>
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Descripción</th>
+                <th>Valor</th>
+                <th>Saldo Actual</th>
+            </tr>
+            <tr>
+                <td>2024-11-20</td>
+                <td>Compra de artículos</td>
+                <td>-100</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>2024-11-22</td>
+                <td>Ingreso de pago</td>
+                <td>200</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>2024-11-24</td>
+                <td>Pago de factura</td>
+                <td>-50</td>
+                <td>650</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Módulo de Ventas -->
+    <div class="module">
+        <h2>Ventas</h2>
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>2024-11-21</td>
+                <td>Producto A</td>
+                <td>2</td>
+                <td>$50</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>2024-11-23</td>
+                <td>Producto B</td>
+                <td>1</td>
+                <td>$75</td>
+                <td>$75</td>
+            </tr>
+            <tr>
+                <td>2024-11-24</td>
+                <td>Producto C</td>
+                <td>3</td>
+                <td>$30</td>
+                <td>$90</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Módulo de Configuraciones -->
+    <div class="module">
+        <h2>Configuraciones</h2>
+        <table>
+            <tr>
+                <th>Ajuste</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Lenguaje</td>
+                <td>Español</td>
+            </tr>
+            <tr>
+                <td>Moneda</td>
+                <td>USD</td>
+            </tr>
+            <tr>
+                <td>Zona Horaria</td>
+                <td>GMT-5</td>
+            </tr>
+            <tr>
+                <td>Notificaciones</td>
+                <td>Activadas</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Módulo de Peticiones, Quejas o Reclamos -->
+    <div class="module">
+        <h2>Peticiones, Quejas o Reclamos</h2>
+        <textarea placeholder="Escribe tu mensaje..."></textarea>
+        <button>Enviar</button>
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>Comentario</th>
+            </tr>
+            <tr>
+                <td>2024-11-20</td>
+                <td>Queja</td>
+                <td>En proceso</td>
+                <td>No se ha recibido el producto a tiempo.</td>
+            </tr>
+            <tr>
+                <td>2024-11-22</td>
+                <td>Peticiones</td>
+                <td>Resuelto</td>
+                <td>Solicitud de cambio de dirección de envío.</td>
+            </tr>
+            <tr>
+                <td>2024-11-23</td>
+                <td>Reclamo</td>
+                <td>En proceso</td>
+                <td>Producto dañado recibido.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
